@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/559e095fe9.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Bookz</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <header>
+      <div class="container">
+        <div class="row w-100">
+              <div class="col-md-7 col-sm-12">
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 mt-2">
+                              <!--Logo do site-->
+                                <img class="logo m-2" src="img/logo-bookz.jpeg">
+                        </div>
+                        <div class="col-md-10 col-sm-8">
+                              <!-- Barra de pesquisa-->
+                              <div class="barra-pesquisa">
+                                <p class="bem-vindo ms-5 mt-3">Seja bem vindo, leitor!</p>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control ms-3 me-2" type="search" placeholder="Livro, autor, gênero..." aria-label="Search">
+                                    <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                                </form>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-5 col-sm-12">
+            
+                  <!--Menu da navbar-->
+                  <nav class="navbar navbar-expand-lg">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><b>Cadastre-se</b></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><b>Entre</b></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><b>Loja física</b></a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <div class="wrapper-header">
+                      <p class="sac me-3">Serviço de atendimento ao consumidor <br><b>2002 02 09 29</b></p> 
+                      <button type="button" class="primary-buttom btn btn-light m-2 p-1">Carrinho<i class="carrinho fa-solid fa-cart-shopping p-1" style="color: rgb(235,188,115)"></i></button>
+                    </div>
+               </div>
+              </div>
+           </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+          <div class="row">
+            <div class = "aside-left col-md-3 col-sm-10">
+              <aside class = "busca text-center quick-find text-white mt-4">
+                  <p ><b>Quick Find - Choose product</b></p>
+                  <p>Find the right product at the right price!</p>
+                  <select class="form-select filtro-genero m-2">
+                    <option selected>Gênero</option>
+                    <option value="1">Clássicos</option>
+                    <option value="2">Fantasia</option>
+                    <option value="3">Ficção científica</option>
+                    <option value="4">Infantil</option>
+                    <option value="5">Infanto-juvenil</option>
+                    <option value="6">Mistério</option>
+                    <option value="7">Romance</option>
+                    <option value="8">Terror</option>
+                </select>
+
+                <select class="form-select filtro-editora m-2">
+                    <option selected>Editora</option>
+                    <option value="1">Arqueiro</option>
+                    <option value="2">Companhia das letras</option>
+                    <option value="3">Galera</option>
+                    <option value="4">Harper Collins</option>
+                    <option value="5">Intrínseca</option>
+                    <option value="6">Jangada</option>
+                    <option value="7">Record</option>
+                    <option value="8">Seguinte</option>
+                    <option value="9">Suma</option>
+                </select>
+
+                <select class="form-select filtro-data m-2" aria-label="Default select example">
+                    <option selected>Data de publicação</option>
+                    <option value="1">1800-1900</option>
+                    <option value="2">1900-1950</option>
+                    <option value="3">1950-2000</option>
+                    <option value="4">2000-2010</option>
+                    <option value="5">2010-2015</option>
+                    <option value="6">2015-2020</option>
+                    <option value="7">2020-atual</option>
+                </select>   
+                  <div class = "row">
+                    <div class ="col-md-6 col-sm-8">
+                        <div class="input-group m-2">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" class="form-control" placeholder="De">
+                        </div>
+                    </div>
+                    <div class = "col-md-6 col-sm-8">
+                        <div class="input-group m-2">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" class="form-control" placeholder="Até">
+                        </div>
+                    </div>
+                  </div>
+               </aside>
+              </div>
+
+              <!--Carrosel-->
+              <div class="col-md-8 col-sm-12 mt-2 mb-5">
+                <div id="carousel" class="carousel slide mt-4 ms-4" data-bs-ride="true">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/lancamentos-arqueiro.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/lancamentos-companhia.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/lancamentos-record.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>     
+        <section>
+          <div class="container">
+            <div class="row">
+              <!--Área da seção de produtos-->
+              <div class="col-md-9">
+                <div class="row">
+                  
+                  <!--Seção de produtos -->
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro1.jpg" class="card-img-top" alt="livro 'Daisy Jones & The Six'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">Daisy Jones & The Six</a></h5>
+                        <p class="card-text">
+                          ★★★★☆ <br>
+                          <b>R$29,99</b>
+                        </p>
+                           
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro2.jpg" class="card-img-top" alt="livro 'Antes que o Café Esfrie'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">Antes que o Café Esfrie</a></h5>
+                        <p class="card-text">
+                          ★★★★☆<br>
+                          <b>$25,99</b> <strike>R$29,99</strike>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro3.jpg" class="card-img-top" alt="livro 'Até o Verão Terminar'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">Até o Verão Terminar</a></h5>
+                        <p class="card-text">
+                          ★★★★★<br>
+                          <b>$29,99</b> <strike>R$34,99</strike>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro4.jpg" class="card-img-top" alt="livro 'E Não Sobrou Nenhum'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">E Não Sobrou Nenhum</a></h5>
+                        <p class="card-text">
+                          ★★★★★ <br>
+                          <b>$25,99</b> <strike>R$34,99</strike>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro5.jpg" class="card-img-top" alt="livro 'A Garota no Lago'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">A Garota no Lago</a></h5>
+                        <p class="card-text">
+                          ★★★★☆<br>
+                          <b>R$15,99</b>
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro6.jpg" class="card-img-top" alt="livro 'Uma Mulher no Escuro'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">Uma Mulher no Escuro</a></h5>
+                        <p class="card-text">
+                          ★★★★★<br>
+                          <b>$28,99</b> <strike>R$35,99</strike>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro7.jpg" class="card-img-top" alt="box trilogia 'Jogos Vorazes'">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">Box trilogia Jogos Vorazes</a></h5>
+                        <p class="card-text">
+                          ★★★★★<br>
+                          <b>$139,99</b> <strike>R$179,99</strike>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro8.jpg" class="card-img-top" alt="livro Illuminae – The Illuminae Files #1">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">Illuminae – The Illuminae Files #1</a></h5>
+                        <p class="card-text">
+                          ★★★★★<br>
+                          <b>$44,99</b> <strike>R$49,99</strike>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                      <img src="img/livro9.jpg" class="card-img-top" alt="livro O Guia Definitivo do Mochileiro das Galáxias">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none">O Guia Definitivo do Mochileiro das Galáxias</a></h5>
+                        <p class="card-text">
+                          ★★★★☆<br>
+                          <b>$89,90</b> <strike>R$99,99</strike>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Mais vistos -->
+              <div class="col-md-3 col-sm-10">
+                <div class = "mais-vistos p-3 text-center">
+                    <h4>Mais populares</h4>
+                    <div class = "conteudo-mais-vistos row round-reviwed">
+                        <div class = "padding-image col-6">
+                            <img src="img/livro1-aside.jpeg" class="side-img" alt="..">
+                        </div>
+                        <div class = "padding-image col-6">
+                            <p class="text-image text-black text-start"><a href="#" class="text-decoration-none">Psicose – Edição Limitada</a><br>★★★★☆ <br><b>$40,90</b> <strike>R$50,90</strike></p>
+                        </div>
+                    </div>
+                    <div class = "conteudo-mais-vistos row bg-body-tertiary round-reviwed">
+                        <div class = "padding-image col-6">
+                            <img src="img/livro2-aside.jpeg" class="side-img" alt="..">
+                        </div>
+                        <div class = "padding-image col-6">
+                              <p class="text-image text-black text-start"><a href="#" class="text-decoration-none">Leitura de Verão</a><br>★★★★★<br><b>$29,90</b><br><strike>R$35,90</strike></p>
+                        </div>
+                    </div>
+                    <div class = "conteudo-mais-vistos row bg-body-tertiary round-reviwed">
+                        <div class = "padding-image col-6">
+                            <img src="img/livro3-aside.jpeg" class="side-img" alt="..">
+                    </div>
+                        <div class = "padding-image col-6">
+                            <p class="text-image text-black text-start"><a href="#" class="text-decoration-none">Lore Olympus – Volume 2</a><br>★★★★★<br><b><b>$45,90</b> <strike>R$53,90</strike></p>
+                        </div>
+                    </div>
+                    <div class = "conteudo-mais-vistos row bg-body-tertiary round-reviwed">
+                        <div class = "padding-image col-6">
+                             <img src="img/livro4-aside.jpeg" class="side-img" alt="..">
+                        </div>
+                        <div class = "padding-image col-6">
+                            <p class="text-image text-black text-start"><a href="#" class="text-decoration-none">As Vantagens de Ser Invisível</a><br>★★★★☆<br><b><b>$29,90</b> <strike>R$44,90</strike></p>
+                        </div>
+                     </div>
+                        <div class = "conteudo-mais-vistos row bg-body-tertiary round-reviwed">
+                            <div class = "padding-image col-6">
+                                <img src="img/livro5-aside.jpeg" class="side-img" alt="..">
+                            </div>
+                            <div class = "padding-image col-6">
+                                <p class="text-image text-black text-start"><a href="#" class="text-decoration-none">O Vilarejo</a><br>★★★★★<br><b><b>19,99</b> <strike>R$30,90</strike></p>  
+                            </div>
+                        </div>
+                          <div class = "row round-reviwed">
+                              <div class = "text-end padding-image">
+                                <button class="botao-newsletter btn btn-outline-light mt-3" type="save">Veja mais</button>
+                              </div>
+                         </div>
+                      </div>
+                    
+                      <!--Newsletter-->
+                      <div class="novidades p-2 mt-2">
+                        <h4>Receba as novidades por e-mail!</h4>
+                        <input type="email" class="form-control mt-3" id="exampleInputEmail1" placeholder="Cadastre seu email"
+                              aria-describedby="emailHelp">
+                        <button type="button" class="btn btn-light mt-2 mb-1">Cadastrar</button>
+                     </div>
+               
+                    </div>   
+                
+            </div>  
+          </div>
+        </section>
+    </main>
+    <footer>
+       <div class = "container">
+          <div class = "row">
+              <div class = "col-md-3 col-sm-6 text-start">
+                  <h5 class="mt-1 mb-3">Métodos de pagamento</h5>
+                  <p>
+                     <i class="fa fa-cc-visa" aria-hidden="true"></i><br>
+                     <i class="fa fa-cc-mastercard" aria-hidden="true"></i><br>
+                     <i class="fa fa-paypal" aria-hidden="true"></i><br>
+                     <i class="fa fa-cc-elo" aria-hidden="true"></i>
+                 </p>
+               </div>
+             <div class = "col-md-3 col-sm-6 text-start">
+                 <h5 class="mt-1 mb-3">Links úteis</h5>
+                   <p>
+                     <a href="#" class="text-decoration-none">Ajuda</a><br>
+                     <a href="#" class="text-decoration-none">Política de compras</a><br>
+                     <a href="#" class="text-decoration-none">Cancelamento e devolução</a><br>
+                     <a href="#" class="text-decoration-none">Perguntas frequentes</a><br>
+                     <a href="#" class="text-decoration-none">Politica de privacidade</a><br>
+                     <a href="#" class="text-decoration-none">Aviso legal</a>
+                   </p>
+             </div>
+              <div class = "col-md-3 col-sm-6">
+                 <h5 class="mt-1 mb-3">Nossas redes sociais</h5>
+                   <p class="fs-1">
+                       <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                       <i class="fa fa-instagram" aria-hidden="true"></i>
+                       <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </p>
+              </div>
+              <div class = "col-md-3 col-sm-6">
+                 <h5 class="mt-1 mb-4">Entre em contato</h5>
+                 <p>Rua Capital, 1234, bairro Panem</p>
+                 <div class = "contact-info">
+                  
+                   <p><i class="fa fa-envelope envelope me-1" aria-hidden="true"></i>info.boozlivraria@bookz.com</p>
+               </div>
+               <div class = "contact-info">
+                   
+                   <p><i class="fa fa-phone-square envelope me-1" aria-hidden="true"></i>(xx) 99999-9999</p>
+               </div>
+           </div>
+        </div>
+     </div>
+     <div class = "container-flex text-dark bg-light" style="font-size: 80;">
+     </div>
+   </footer> 
+</body>
+</html>

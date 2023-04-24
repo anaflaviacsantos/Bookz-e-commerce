@@ -1,0 +1,98 @@
+header{
+    background-color: rgb(235,188,115);
+    color: #0c0c0c;
+}
+
+.barra-pesquisa{
+  align-content: end;
+}
+
+navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wrapper-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.quick-find{
+  border-radius: 9px;
+  padding-right: 20px;
+  float: left;
+  text-align: center;
+}
+
+.card {
+    border-width: 0;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    text-align: start;
+  }
+
+.card-title{
+  font-size: 100%;
+  text-align: center;
+}
+  
+  .card img {
+    height: 275px;
+    width: 175px;
+    object-fit: cover;
+    align-self: center;
+  }
+  
+  @media (max-width: 576px) {
+    .card img {
+      height: 300px;
+    }
+  }
+
+  aside{
+    background-color: rgb(235, 142, 55);
+    color: whitesmoke;
+    margin: 0px;
+  }
+
+  .top-ranked-container{
+    background-color: rgb(235,188,115);
+    border-radius: 9px;
+    color: black;
+    text-align: center;
+  }
+
+  .mais-vistos{
+    background-color: rgb(235, 142, 55);
+    border-radius: 9px;
+    color: white;
+  }
+
+  .mais-vistos img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-top: 5px;
+  }
+
+  .conteudo-mais-vistos{
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 9px;
+  }
+
+  .novidades{
+    background-color: rgb(235,188,115) ;
+    border-radius: 9px;
+    color: white;
+    text-align: center;
+  }
+
+
+  footer{
+    background-color: rgb(235,188,115);
+  }
